@@ -10,8 +10,8 @@
   <license>docs\license.txt</license>
  
   <releases>
-    <release version="1.0.0" date="2016-02-13">
-      Initial version
+    <release version="1.0.1" date="2016-02-14">
+      Improved version
     </release>
   </releases>
 
@@ -26,16 +26,26 @@
       <accept Tcompiler="ARMCC"/>
       <accept Tcompiler="GCC"/>
     </condition>
+    <condition id="Cortex-M Device">
+      <description>Cortex-M processor based device: Cortex-M0, Cortex-M0+, Cortex-M3, Cortex-M4, Cortex-M7, SC000 or SC3000</description>
+      <accept Dcore="Cortex-M0"/>
+      <accept Dcore="Cortex-M0+"/>
+      <accept Dcore="Cortex-M3"/>
+      <accept Dcore="Cortex-M4"/>
+      <accept Dcore="Cortex-M7"/>
+      <accept Dcore="SC000"/>
+      <accept Dcore="SC300"/>
+    </condition>
   </conditions>
   
   <components>
-    <component Cclass="McuOnEclipse" Cgroup="Utility" Cversion="1.0.0" condition="ARM">
+    <component Cclass="McuOnEclipse" Cgroup="Utility" Cversion="1.0.1" condition="Cortex-M Device">
       <description>Utility</description>
       <files>
+        <file category="doc" name="docs/Utility.html"/>
         <file category="header" name="src/config/config_Utility.h" attr="config" version="1.0.0"/>
         <file category="sourceC" name="src/Utility.c"/>
         <file category="header" name="src/Utility.h"/>
-        <file category="doc" name="docs/Utility.html"/>
         <file category="doc" name="docs/UtilityEvents.html"/>
         <file category="doc" name="docs/UtilityMethods.html"/>
         <file category="doc" name="docs/UtilityProperties.html"/>
