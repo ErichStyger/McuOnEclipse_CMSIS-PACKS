@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<package schemaVersion="1.4" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+<package schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>McuOnEclipse</vendor>
   <name>Utility</name>
-  <description>Jansson is a C library for encoding, decoding and manipulating JSON data</description>
+  <description>Set of utility including safe string functions</description>
   <!-- web download link -->
   <url>https://github.com/ErichStyger/McuOnEclipse_CMSIS-PACKS/raw/master/</url>
   <supportContact>http://www.mcuoneclipse.com</supportContact>
-   <license>Docs\license.txt</license>
+  <license>docs\license.txt</license>
  
   <releases>
     <release version="1.0.0" date="2016-02-13">
@@ -21,7 +21,7 @@
   </taxonomy>
 
   <conditions>
-    <condition id="ARMCC">
+    <condition id="ARM">
       <description>Use only with the ARM compiler</description>
       <accept Tcompiler="ARMCC"/>
       <accept Tcompiler="GCC"/>
@@ -29,12 +29,16 @@
   </conditions>
   
   <components>
-    <component Cclass="McuOnEclipse" Cgroup="Utility" Csub="Strings" Cversion="1.0.0" condition="ARMCC">
+    <component Cclass="McuOnEclipse" Cgroup="Utility" Cversion="1.0.0" condition="ARM">
       <description>Utility</description>
       <files>
         <file category="header" name="src/config/config_Utility.h" attr="config" version="1.0.0"/>
         <file category="sourceC" name="src/Utility.c"/>
         <file category="header" name="src/Utility.h"/>
+        <file category="doc" name="docs/Utility.html"/>
+        <file category="doc" name="docs/UtilityEvents.html"/>
+        <file category="doc" name="docs/UtilityMethods.html"/>
+        <file category="doc" name="docs/UtilityProperties.html"/>
       </files>
     </component>
   </components>
