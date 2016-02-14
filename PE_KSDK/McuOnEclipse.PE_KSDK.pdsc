@@ -2,27 +2,27 @@
 
 <package schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>McuOnEclipse</vendor>
-  <name>Utility</name>
-  <description>Set of utility functions including safe string functions</description>
+  <name>PE_KSDK</name>
+  <description>Wrapper and defines for various environments</description>
   <!-- web download link -->
-  <url>https://github.com/ErichStyger/McuOnEclipse_CMSIS-PACKS/raw/master/Utility</url>
+  <url>https://github.com/ErichStyger/McuOnEclipse_CMSIS-PACKS/raw/master/PE_KSDK</url>
   <supportContact>http://www.mcuoneclipse.com</supportContact>
   <license>docs\license.txt</license>
  
   <releases>
     <release version="1.0.0" date="2016-02-14">
-      Improved version
+      First version
     </release>
   </releases>
   
   <RTE_Components_h>
     <!-- the following content goes into file 'RTE_Components.h' -->
-    #define RTE_HAS_Utility 1              /* 1: Utility component present */
+    #define RTE_HAS_PE_KSDK 1              /* 1: PE_KSDK component present */
   </RTE_Components_h>
-
+  
   <taxonomy>
     <description Cclass="McuOnEclipse">McuOnEclipse Software</description>
-    <description Cclass="McuOnEclipse" Cgroup="Utility">McuOnEclipse Utility Component</description>
+    <description Cclass="McuOnEclipse" Cgroup="PE_KSDK">McuOnEclipse PE_KSDK Component</description>
   </taxonomy>
 
   <conditions>
@@ -38,21 +38,15 @@
       <accept Dcore="Cortex-M3"/>
       <accept Dcore="Cortex-M4"/>
       <accept Dcore="Cortex-M7"/>
-      <require Cclass="McuOnEclipse" Cgroup="PE_KSDK"/>
     </condition>
   </conditions>
   
   <components>
-    <component Cclass="McuOnEclipse" Cgroup="Utility" Cversion="1.0.0" condition="Cortex-M Device">
-      <description>Utility</description>
+    <component Cclass="McuOnEclipse" Cgroup="PE_KSDK" Cversion="1.0.0" condition="Cortex-M Device">
+      <description>PE_KSDK</description>
       <files>
-        <file category="doc" name="docs/Utility.html"/>
-        <file category="header" name="src/config/config_Utility.h" attr="config" version="1.0.0"/>
-        <file category="sourceC" name="src/Utility.c"/>
-        <file category="header" name="src/Utility.h"/>
-        <file category="doc" name="docs/UtilityEvents.html"/>
-        <file category="doc" name="docs/UtilityMethods.html"/>
-        <file category="doc" name="docs/UtilityProperties.html"/>
+        <file category="header" name="src/PE_KSDK_Types.h"/>
+        <file category="header" name="src/Cpu.h"/>
       </files>
     </component>
   </components>

@@ -1,2 +1,3 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pdsc url="https://github.com/ErichStyger/McuOnEclipse_CMSIS-PACKS/raw/master/Utility/" name="McuOnEclipse.Utility.pdsc"  version="1.0.0"/>
+<pdsc url="https://github.com/ErichStyger/McuOnEclipse_CMSIS-PACKS/raw/master/PE_KSDK/" name="McuOnEclipse.PE_KSDK.pdsc"  version="1.0.0"/>
