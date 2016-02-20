@@ -15,39 +15,20 @@
     </release>
   </releases>
   
-  <RTE_Components_h>
-    <!-- the following content goes into file 'RTE_Components.h' -->
-    #define RTE_HAS_Utility 1              /* 1: Utility component present */
-  </RTE_Components_h>
-
   <taxonomy>
     <description Cclass="McuOnEclipse">McuOnEclipse Software</description>
     <description Cclass="McuOnEclipse" Cgroup="Utility">McuOnEclipse Utility Component</description>
   </taxonomy>
 
-  <conditions>
-    <condition id="ARM">
-      <description>Use only with the ARM compiler</description>
-      <accept Tcompiler="ARMCC"/>
-      <accept Tcompiler="GCC"/>
-    </condition>
-    <condition id="Cortex-M Device">
-      <description>Cortex-M processor based device: Cortex-M0, Cortex-M0+, Cortex-M3, Cortex-M4, Cortex-M7, SC000 or SC3000</description>
-      <accept Dcore="Cortex-M0"/>
-      <accept Dcore="Cortex-M0+"/>
-      <accept Dcore="Cortex-M3"/>
-      <accept Dcore="Cortex-M4"/>
-      <accept Dcore="Cortex-M7"/>
-      <require Cclass="McuOnEclipse" Cgroup="PE_KSDK"/>
-    </condition>
-  </conditions>
-  
   <components>
-    <component Cclass="McuOnEclipse" Cgroup="Utility" Cversion="1.0.0" condition="Cortex-M Device">
+    <component Cclass="McuOnEclipse" Cgroup="Utility" Cversion="1.0.0">
       <description>Utility</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define RTE_HAS_Utility 1              /* 1: Utility component present */
+      </RTE_Components_h> 
       <files>
         <file category="doc" name="docs/Utility.html"/>
-        <file category="header" name="src/config/config_Utility.h" attr="config" version="1.0.0"/>
         <file category="sourceC" name="src/Utility.c"/>
         <file category="header" name="src/Utility.h"/>
         <file category="doc" name="docs/UtilityEvents.html"/>
